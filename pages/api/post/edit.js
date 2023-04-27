@@ -14,8 +14,8 @@ export default async function Edit(req, res){
         try {
           const db = (await connectDB).db('todo')
           let result = await db.collection('post').updateOne({_id : new ObjectId(req.body._id)}, 
-            { $set : { task : req.body.task , title : req.body.title, content : req.body.content, time : req.body.time}})
-              return  res.status(200).redirect(302, '/list')
+            { $set : { content : req.body.content, time : req.body.time}})
+              res.status(200).redirect(302, '/list')
         } catch (error) {
           console.log(error)
         }

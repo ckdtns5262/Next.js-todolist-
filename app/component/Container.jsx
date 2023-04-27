@@ -1,7 +1,7 @@
 
 
 import Sidebar from './Sidebar'
-import List from '../list/page'
+
 
 export default function Container({children}){
     return (

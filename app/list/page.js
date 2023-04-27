@@ -1,6 +1,5 @@
 import { connectDB } from "@/util/database"
-import CheckButton from "../component/button/CheckButton"
-import EditButton from "../component/button/EditButton"
+import ListItem from "./ListItem"
 
 export default async function List() {
 
@@ -11,16 +10,7 @@ export default async function List() {
     return (
         <>
             <div className="">
-                {result.map((name, i) =>
-                    <div key={i} className="list w-11/12 justify-between">
-                        <h3>(){name.title} : {name.content}</h3>
-                        <h3 className="flex">
-                            {name.time}
-                            <CheckButton/>
-                            <EditButton name={name}/>
-                        </h3>
-                    </div>
-                )}
+               <ListItem result={result}/>
             </div>
         </>
     )
