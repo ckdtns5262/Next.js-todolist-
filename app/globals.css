@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-    margin: auto;
+    margin : auto;
 }
 
 body {
@@ -12,6 +12,7 @@ body {
     height: 100vh;
     background-repeat: none;
     background-size: cover;
+
 }
 
 a {
@@ -21,13 +22,15 @@ a {
 
 .container {
     display: flex;
-    height: 80vh;
+    height: 90vh;
     width: 80vw;
     background: #14a8ab;
     margin-top: 48px;
     margin-bottom: 48px;
     border: 8px solid white;
     border-radius: 10px;
+    position: relative;
+
 }
 
 
@@ -50,7 +53,7 @@ a {
     color: white;
 }
 
-li:hover {
+.s-li:hover {
     color: #a08aff;
     cursor: pointer;
 }
@@ -72,6 +75,62 @@ li:hover {
     border-radius: 30px;
     opacity: 1;
     transition: all 1s;
+    list-style: none;
+}
 
+.settings {
+    background : white;
+    width: 55vw;
+    height: 70vh;
+    border-radius: 10px;
+    margin-top: 10px;
+    position: relative;
+}   
+
+.i {
+    margin: 0 !important;
+    margin-left: 10px !important;
+   
+   
+    margin-right: 10px !important;
+}
+.settings span {
+    align-items: center;
+}
+
+.settings li {
+    margin-left: 16px;
+}
+
+.toggleSwitch {
+    width: 50px;
+    height: 25px;
+    display: block;
+    position: relative;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 16px 3px rgba(0 0 0 / 15%);
+    margin: 0;
+    cursor: pointer;
+}
+.toggleSwitch .toggleButton {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 11%;
+    left: 4px;
+    transform: translateY(-3%);
+    border-radius: 50%;
+    background: #f03d3d;
+}
+#toggle:checked ~ .toggleSwitch {
+    background: #f03d3d;
+}
+#toggle:checked ~ .toggleSwitch .toggleButton {
+    left: calc(100% - 22px);
+    background: #fff;
+}
+.toggleSwitch, .toggleButton {
+    transition: all 0.2s ease-in;
 }
 

@@ -12,29 +12,32 @@ export default async function Sidebar() {
 
   
  let session = await getServerSession(authOptions)
-  
+  console.log(session)
   return (
     <div className="text-black">
         <Profile/>
       <ul className="mt-12 space-y-20">
-        <li className="">
+        <li className="s-li">
           <Link href="/write">
             <BsCalendar4Week className="w-1/4" />
             <p className="w-3/4">오늘의 할일 만들기</p>
           </Link>
         </li>
-        <li className="">
+        <li className="s-li">
           <Link href="/list">
             <AiOutlineSchedule className="w-1/4" />
             <p className="w-3/4">오늘의 할일보기 </p>
           </Link>
         </li>
-        <li className="flex">
+        <li className="s-li">
+          <Link href="/setting">          
           <IoSettingsOutline className="w-1/4" />
           <p className="w-3/4">Settings</p>
+          </Link>
+
         </li> 
-        {session ? <li className="flex"><AiOutlineLogout/><LogOutButton/></li> :
-        <li className="flex"><AiOutlineLogin/><LoginButton/></li>}
+        {session ? <li className="flex s-li"><AiOutlineLogout/><LogOutButton/></li> :
+        <li className="flex s-li"><AiOutlineLogin/><LoginButton/></li>}
 
       </ul>
     </div>

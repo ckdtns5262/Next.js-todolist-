@@ -12,7 +12,7 @@ export default async function Edit(props) {
 
 
     return (
-        <div className="bg-white p-2 border border-black rounded-full w-[55vw]">
+        <div className="bg-white p-2 border border-black rounded-full w-[55vw] mt-3">
             <form action="/api/post/edit" method="POST" className="justify-between">
                 <input name="_id" defaultValue={result._id} style={{display : "none"}}/>
                 <input name="content" type="text" defaultValue={result.content} />

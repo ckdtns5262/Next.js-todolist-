@@ -9,8 +9,8 @@ export default async function Write() {
         <>
             <div className="bg-white p-2 border border-black rounded-full w-[55vw] mt-3">
                 <form action="/api/post/write" method="POST" className="justify-between">
-                    <input name="content" type="text" className="w-3/4"/>
-                    <input name="time" type="time"/>
+                    <input name="content" type="text" className="w-3/4" required="true" autoFocus/>
+                    <input name="time" type="time" required="true"/>
                     <button className="bg-blue-300 rounded-md border-lime-400 hover:bg-blue-700">등록</button>
                 </form>
             </div>
