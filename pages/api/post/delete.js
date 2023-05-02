@@ -1,9 +1,15 @@
 import { connectDB } from "@/util/database"
 import { ObjectId } from "mongodb"
+import { getServerSession } from "next-auth"
+import { authOptions } from "../auth/[...nextauth]"
 
 
 
 export default async function Delete(req, res){
+
+    let session = getServerSession(authOptions)
+
+
 
     if(req.method == "POST"){
         try {

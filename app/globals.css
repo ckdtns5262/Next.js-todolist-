@@ -134,3 +134,20 @@ a {
     transition: all 0.2s ease-in;
 }
 
+.alert-box {
+    display: flex;
+    background: #14a8ab;
+    width: 40vw;
+    height: 40vh;
+    align-items: center;
+   position: relative;
+    justify-items: center;
+    margin-left: 20%;
+    z-index: 3;
+}
+
+.alert-center {
+    position: absolute;
+    left: 34%;
+    top: 15%;
+}

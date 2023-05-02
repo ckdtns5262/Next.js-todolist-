@@ -12,7 +12,7 @@ export default async function Sidebar() {
 
   
  let session = await getServerSession(authOptions)
-  console.log(session)
+
   return (
     <div className="text-black">
         <Profile/>
