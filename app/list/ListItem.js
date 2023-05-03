@@ -2,14 +2,18 @@
 
 import { BsCheckCircle } from "react-icons/bs";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 
 export default function ListItem({ result }) {
+
+    const router = useRouter()
 
     return (
         <div>
             {result.map((name, i) =>
                 <div key={i} className="list w-11/12 justify-between">
-                    <h3>{name.content}</h3>
+                    <h3 onClick={()=>router.push(`/detail/${name._id}`)}>{name.content}</h3>
                     <h3 className="flex items-center space-x-3">
                         <span> {name.time}까지</span>
                         <BsCheckCircle className="text-[24px] hover:text-red-500"
