@@ -21,11 +21,18 @@ export default function Register() {
            <CloseButton/>
             <form action="/api/auth/signup" method="POST">
             <div className="flex flex-col">
-                <div className="">
+                <div>
                     <p className="">UserId
                         <input className="w-full p-4 text-lg bg-black border-2 border-neutral-800 disabled:bg-neutral-900 
                         disabled:opacity-70 disabled:cursor-not-allowed
                         rounded-md outline-none text-white focus:border-sky-500 focus:border-2 transition" placeholder="userId" name="userId"/>
+                    </p>
+                </div>
+                <div>
+                    <p className="">Name
+                        <input className="w-full p-4 text-lg bg-black border-2 border-neutral-800 disabled:bg-neutral-900 
+                        disabled:opacity-70 disabled:cursor-not-allowed
+                        rounded-md outline-none text-white focus:border-sky-500 focus:border-2 transition" placeholder="name" name="name"/>
                     </p>
                 </div>
                 <div>

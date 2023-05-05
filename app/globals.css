@@ -37,8 +37,8 @@ a {
 .sidebar {
     width: 200px;
     color: black;
-    height: 100%;
     margin: 0;
+    height: 100%;
     background: #eee;
 
 }
@@ -46,6 +46,8 @@ a {
 .content {
     margin-top: 20px;
     margin-left: 55px;
+    
+   
 }
 
 .content p {
@@ -150,4 +152,17 @@ a {
     position: absolute;
     left: 34%;
     top: 15%;
+}
+
+.circle-item {
+    margin :0 !important;
+    margin-left: 50px !important;
+    margin-top : 10px !important;
+}
+.circle {
+    width: 1rem;
+    height: 0.9rem;
+    border-radius: 100%;
+    margin :0 !important
+
 }

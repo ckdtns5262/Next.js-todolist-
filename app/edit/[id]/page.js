@@ -15,9 +15,9 @@ export default async function Edit(props) {
         <div className="bg-white p-2 border border-black rounded-full w-[55vw] mt-3">
             <form action="/api/post/edit" method="POST" className="justify-between">
                 <input name="_id" defaultValue={result._id} style={{display : "none"}}/>
-                <input name="content" type="text" defaultValue={result.content} />
-                <input name="time" type="text" defaultValue={result.time} />
-                <button className="bg-blue-300 rounded-md border-lime-400 hover:bg-blue-700" type="submit">수정</button>
+                <input name="content" type="text" defaultValue={result.content}  style={{outline : 'none'}}/>
+                <input name="time" type="text" defaultValue={result.time} style={{outline : 'none'}} />
+                <button className="bg-blue-300 rounded-md border-lime-400 hover:bg-red-700" type="submit">수정</button>
             </form> 
         </div>
     )

@@ -17,7 +17,7 @@ const Comment = ({_id}) => {
   <>
 
   {data.length > 0 ?  
-  data.map((a,i)=> <div key={i} className="flex">
+  data.map((a,i)=> <div key={i} className="flex space-x-4">
         <p>작성자 : {a.writer}</p>
         <p>{a.comment}</p>
         </div> 

@@ -7,7 +7,7 @@ import { authOptions } from "../auth/[...nextauth]"
 export default async function Write(req, res) {
 
   let session = await getServerSession(req, res, authOptions)
-
+  console.log(req.body)
 
   if (req.method === 'POST') {
     if (session) {
@@ -15,7 +15,7 @@ export default async function Write(req, res) {
     }
     const db = (await connectDB).db('todo')
     let result = await db.collection('post').insertOne(req.body)
-    return res.status(200).json('처리완료')
+    return res.status(200).redirect(302,'/list')
 
   }
 }

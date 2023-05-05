@@ -34,7 +34,8 @@ export const authOptions = {
             name : "credentials",
             credentials : {
                 email : {label : "email", type : "text"},
-                password : {label : "password", type : "password"}
+                password : {label : "password", type : "password"},
+              
             },
             async authorize(credentials) {
                 let db = (await connectDB).db('todo');
