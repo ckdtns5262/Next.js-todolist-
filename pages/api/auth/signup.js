@@ -16,9 +16,12 @@ export default async function handler(req, res){
             res.status(500).json({Error : 'id입력하셈'})
         } else if(req.body.password ==''){
             res.status(500).json({Error : 'pass입력하셈'})
-        } 
+        } else if(req.body.name == ''){
+            res.status(500).json({Error : 'name입력하셈'})
+            return res.status(405).end()
+        }
 
-        
+
         if(findUserId){
             res.status(500).json({Error : '중복된 id임'})
         } else if(findEmail){
