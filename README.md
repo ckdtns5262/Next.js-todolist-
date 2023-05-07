@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Next.js(13) , React, TailwindCSS, MongoDB로 TodoList 제작
+<img width="700" alt="image1" src="https://user-images.githubusercontent.com/109561152/236670525-170fcb76-1a95-4c97-9760-ec2becabc777.png">
 
-## Getting Started
+### 한줄 소개
+- Next.js 13버젼을 활용하여 만든 todolist입니다. Next-Auth를 활용하여 Google, GitHub, Naver 로그인 구현하였으며 
+CSS는 tailwind css, global css 둘 다 사용하였습니다. 
+=> 향후 퍼블리싱 작업 추가하여 업로드 예정
 
-First, run the development server:
+### 목표 
+- Next.js를 이용해 Front-end 뿐만 아니라 FullStack 웹 개발을 할수 있는 능력을 배양하려고 하였음
+### Cloning the repository
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```shell
+git clone https://github.com/ckdtns5262/Next.js-todolist-.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install packages
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```shell
+npm i
+```
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.js`.
+### Setup .env file
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```js
+DATABASE_URL=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GITHUB_ID=
+GITHUB_SECRET=
+NAVER_CLIENT_ID=
+NAVER_CLIENT_SECRET=
+NEXTAUTH_JWT_SECRET=
+NEXTAUTH_SECRET=
+```
 
-## Learn More
+### Start the app
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```shell
+npm run dev
+```
