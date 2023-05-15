@@ -12,8 +12,18 @@ body {
     height: 100vh;
     background-repeat: none;
     background-size: cover;
-
 }
+
+.dark-mode {
+    background: #222;
+    color : white;
+}
+.dark-mode .container {
+    color: white;
+    border: gray solid 8px;
+}
+
+
 
 a {
     margin: 4px 0px;

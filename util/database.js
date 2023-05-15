@@ -1,5 +1,5 @@
 import { MongoClient } from "mongodb"
-const url = process.env.DATABASE_URL
+const url = 'mongodb+srv://admin:admin@cluster0.jumy1y4.mongodb.net/test'
 const options  = { useNewUrlParser : true}
 let connectDB
 
